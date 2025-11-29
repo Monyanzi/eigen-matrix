@@ -54,20 +54,20 @@ export const StrategicFrameworks = () => {
                   </div>
                   <h3 className="font-serif text-3xl text-navy mb-6">Charting the Course for Sustainable Growth</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                    We help you define a clear path forward. By analysing market trends and your internal capabilities, we build a strategy that is not only ambitious but achievable. We focus on long-term value creation, ensuring your business is resilient and ready for the future.
+                    Strategy without rigour is just ambition. We combine deep market intelligence with your internal data to build a roadmap that actually works. By identifying what truly drives your competitive advantage, we help you make bold bets with confidence, not hope.
                   </p>
                   <ul className="space-y-3 mb-8">
                     <li className="flex items-center text-navy/80">
                       <div className="w-1.5 h-1.5 bg-navy rounded-full mr-3" />
-                      Precise market positioning
+                      Revenue driver identification
                     </li>
                     <li className="flex items-center text-navy/80">
                       <div className="w-1.5 h-1.5 bg-navy rounded-full mr-3" />
-                      Competitive landscape analysis
+                      Competitive moat analysis
                     </li>
                     <li className="flex items-center text-navy/80">
                       <div className="w-1.5 h-1.5 bg-navy rounded-full mr-3" />
-                      Long-term scenario planning
+                      Scenario-based planning framework
                     </li>
                   </ul>
                   <Button className="bg-navy hover:bg-navy-deep text-lg h-12 px-8 group" asChild>
@@ -77,11 +77,8 @@ export const StrategicFrameworks = () => {
                     </Link>
                   </Button>
                 </div>
-                <div className="bg-secondary/30 h-full min-h-[300px] flex items-center justify-center border border-navy/10 rounded-lg p-8">
-                  <div className="text-center">
-                     {/* Placeholder for visual aid */}
-                    <div className="text-navy/40 font-mono text-sm">[Strategic Map Visualisation]</div>
-                  </div>
+                <div className="bg-secondary/30 h-full min-h-[300px] flex items-center justify-center border border-navy/10 rounded-lg p-8 overflow-hidden">
+                  <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Strategic planning session" className="w-full h-full object-cover" />
                 </div>
               </div>
             </TabsContent>
@@ -94,20 +91,20 @@ export const StrategicFrameworks = () => {
                   </div>
                   <h3 className="font-serif text-3xl text-navy mb-6">Efficiency Without Compromise</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                    Streamline your processes to deliver better results with fewer resources. We identify bottlenecks and inefficiencies, implementing systems that run smoothly and reliably. Our goal is to create an agile organisation capable of adapting to change.
+                    Most organisations operate at 60-70% efficiency. We help you unlock that hidden 30%. Through systematic process redesign and intelligent automation, we help you deliver better results with leaner teams. The result: lower costs, faster execution, and higher profit margins.
                   </p>
                   <ul className="space-y-3 mb-8">
                      <li className="flex items-center text-navy/80">
                       <div className="w-1.5 h-1.5 bg-navy rounded-full mr-3" />
-                      Process optimisation
+                      End-to-end process mapping
                     </li>
                     <li className="flex items-center text-navy/80">
                       <div className="w-1.5 h-1.5 bg-navy rounded-full mr-3" />
-                      Resource allocation modelling
+                      Organisational structure optimisation
                     </li>
                     <li className="flex items-center text-navy/80">
                       <div className="w-1.5 h-1.5 bg-navy rounded-full mr-3" />
-                      Performance metric alignment
+                      KPI alignment and tracking
                     </li>
                   </ul>
                   <Button className="bg-navy hover:bg-navy-deep text-lg h-12 px-8 group" asChild>
@@ -117,11 +114,8 @@ export const StrategicFrameworks = () => {
                     </Link>
                   </Button>
                 </div>
-                <div className="bg-secondary/30 h-full min-h-[300px] flex items-center justify-center border border-navy/10 rounded-lg p-8">
-                  <div className="text-center">
-                    {/* Placeholder for visual aid */}
-                    <div className="text-navy/40 font-mono text-sm">[Workflow Efficiency Graph]</div>
-                  </div>
+                <div className="bg-secondary/30 h-full min-h-[300px] flex items-center justify-center border border-navy/10 rounded-lg p-8 overflow-hidden">
+                  <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Operational efficiency" className="w-full h-full object-cover" />
                 </div>
               </div>
             </TabsContent>
@@ -134,20 +128,20 @@ export const StrategicFrameworks = () => {
                   </div>
                   <h3 className="font-serif text-3xl text-navy mb-6">Technology as a Catalyst</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                    Embrace the digital tools that matter. We guide you through the modernisation of your infrastructure, ensuring technology serves your business goals rather than complicating them. From data analytics to automation, we help you stay ahead.
+                    Technology alone doesn't drive growth. The right technology, deployed strategically, does. We help you cut through the noise, identifying which digital investments will genuinely move your business forward. From data infrastructure to automation, we align tech with your business outcomes.
                   </p>
                    <ul className="space-y-3 mb-8">
                     <li className="flex items-center text-navy/80">
                       <div className="w-1.5 h-1.5 bg-navy rounded-full mr-3" />
-                      Digital transformation roadmap
+                      Business-driven technology strategy
                     </li>
                     <li className="flex items-center text-navy/80">
                       <div className="w-1.5 h-1.5 bg-navy rounded-full mr-3" />
-                      Data leverage and analytics
+                      Data and analytics infrastructure
                     </li>
                     <li className="flex items-center text-navy/80">
                       <div className="w-1.5 h-1.5 bg-navy rounded-full mr-3" />
-                      Tech stack modernisation
+                      Change management and adoption
                     </li>
                   </ul>
                   <Button className="bg-navy hover:bg-navy-deep text-lg h-12 px-8 group" asChild>
@@ -157,11 +151,8 @@ export const StrategicFrameworks = () => {
                     </Link>
                   </Button>
                 </div>
-                 <div className="bg-secondary/30 h-full min-h-[300px] flex items-center justify-center border border-navy/10 rounded-lg p-8">
-                  <div className="text-center">
-                     {/* Placeholder for visual aid */}
-                    <div className="text-navy/40 font-mono text-sm">[Digital Integration Model]</div>
-                  </div>
+                 <div className="bg-secondary/30 h-full min-h-[300px] flex items-center justify-center border border-navy/10 rounded-lg p-8 overflow-hidden">
+                  <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Digital transformation" className="w-full h-full object-cover" />
                 </div>
               </div>
             </TabsContent>

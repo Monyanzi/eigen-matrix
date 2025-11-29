@@ -6,6 +6,7 @@ import { BlueprintDiagram } from '@/components/BlueprintDiagram';
 import { ProfessionalCard } from '@/components/ProfessionalCard';
 import { Button } from '@/components/ui/button';
 import { StrategicFrameworks } from '@/components/StrategicFrameworks';
+import { AboutUs } from '@/components/AboutUs';
 import { Link } from 'react-router-dom';
 
 const Index = () => {
@@ -137,6 +138,48 @@ const Index = () => {
 
       {/* STRATEGIC FRAMEWORKS TABS SECTION */}
       <StrategicFrameworks />
+
+      {/* PROMINENT MID-PAGE CTA SECTION */}
+      <section className="py-20 px-6 bg-navy text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="font-serif text-4xl md:text-5xl font-medium mb-6 text-balance">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-white/80 mb-10 font-light max-w-2xl mx-auto">
+              Let's discuss how rigorous analysis and strategic thinking can unlock real growth for your organisation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-white hover:bg-white/90 text-navy text-lg px-8 h-14 group rounded-none"
+                asChild
+              >
+                <a href="#contact">
+                  Schedule a Consultation
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                </a>
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-white text-white hover:bg-white/10 text-lg px-8 h-14 rounded-none"
+                asChild
+              >
+                <a href="#expertise">View Our Approach</a>
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ABOUT US SECTION */}
+      <AboutUs />
 
       {/* SECTION 3: THE WHY US */}
       <section id="the-firm" className="py-32 px-6">

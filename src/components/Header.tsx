@@ -52,9 +52,6 @@ export const Header = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <Link to="/login" className="text-sm font-medium text-muted-foreground hover:text-navy transition-colors hidden md:block">
-            Client Login
-          </Link>
           <Button
             size="sm"
             className="bg-navy hover:bg-navy-deep text-white rounded-none px-6 h-10 font-medium tracking-wide transition-all duration-300"
