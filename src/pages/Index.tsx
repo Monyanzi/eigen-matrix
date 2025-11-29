@@ -6,6 +6,7 @@ import { BlueprintDiagram } from '@/components/BlueprintDiagram';
 import { ProfessionalCard } from '@/components/ProfessionalCard';
 import { Button } from '@/components/ui/button';
 import { StrategicFrameworks } from '@/components/StrategicFrameworks';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   return (
@@ -34,16 +35,20 @@ const Index = () => {
               <Button
                 size="lg"
                 className="bg-navy hover:bg-navy-deep text-lg px-8 h-14 group rounded-none"
+                asChild
               >
-                View Our Expertise
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                <a href="#expertise">
+                  View Our Expertise
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                </a>
               </Button>
                <Button
                 variant="ghost"
                 size="lg"
                 className="text-navy hover:bg-navy/5 text-lg px-8 h-14 group rounded-none"
+                asChild
               >
-                Read The Manifesto
+                <a href="#the-firm">Read The Manifesto</a>
               </Button>
             </div>
           </motion.div>
@@ -87,9 +92,9 @@ const Index = () => {
                 <p className="text-muted-foreground leading-relaxed flex-grow">
                   We use advanced mathematics to pinpoint exactly what drives your revenue. We don't just spot patterns, we prove what actually causes growth.
                 </p>
-                 <div className="mt-8 pt-8 border-t border-border flex items-center text-sm font-medium text-navy cursor-pointer group">
+                <Link to="/services/analytics" className="mt-8 pt-8 border-t border-border flex items-center text-sm font-medium text-navy cursor-pointer group hover:text-navy-deep">
                   Learn more <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
-                </div>
+                </Link>
               </div>
             </ProfessionalCard>
 
@@ -104,9 +109,9 @@ const Index = () => {
                 <p className="text-muted-foreground leading-relaxed flex-grow">
                   We reorganise your operations so every team works towards the same profitable goal. No more wasted effort from teams pulling in different directions.
                 </p>
-                <div className="mt-8 pt-8 border-t border-border flex items-center text-sm font-medium text-navy cursor-pointer group">
+                <Link to="/services/operations" className="mt-8 pt-8 border-t border-border flex items-center text-sm font-medium text-navy cursor-pointer group hover:text-navy-deep">
                   Learn more <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
-                </div>
+                </Link>
               </div>
             </ProfessionalCard>
 
@@ -121,9 +126,9 @@ const Index = () => {
                 <p className="text-muted-foreground leading-relaxed flex-grow">
                   We prove mathematically where your investment will deliver the strongest returns. Every pound you spend is backed by rigorous analysis, not guesswork.
                 </p>
-                 <div className="mt-8 pt-8 border-t border-border flex items-center text-sm font-medium text-navy cursor-pointer group">
+                <Link to="/services/investment" className="mt-8 pt-8 border-t border-border flex items-center text-sm font-medium text-navy cursor-pointer group hover:text-navy-deep">
                   Learn more <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
-                </div>
+                </Link>
               </div>
             </ProfessionalCard>
           </div>
@@ -222,28 +227,31 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              'Financial Services',
-              'Technology',
-              'Manufacturing',
-              'Healthcare',
+              { name: 'Financial Services', slug: 'financial-services' },
+              { name: 'Technology', slug: 'technology' },
+              { name: 'Manufacturing', slug: 'manufacturing' },
+              { name: 'Healthcare', slug: 'healthcare' },
             ].map((industry, i) => (
-              <motion.a
-                href="#"
+              <motion.div
                 key={i}
-                className="group relative bg-white border border-border p-10 flex items-center justify-center text-center hover:border-navy/30 transition-all duration-300 h-64 overflow-hidden"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
               >
-                 <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/5 transition-colors duration-500" />
-                <h3 className="font-serif text-2xl text-navy group-hover:-translate-y-2 transition-transform duration-300 relative z-10">
-                  {industry}
-                </h3>
-                 <span className="absolute bottom-8 text-xs font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 text-navy">
-                    View Case Studies
-                 </span>
-              </motion.a>
+                <Link
+                  to={`/industries/${industry.slug}`}
+                  className="group relative bg-white border border-border p-10 flex items-center justify-center text-center hover:border-navy/30 transition-all duration-300 h-64 overflow-hidden block"
+                >
+                   <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/5 transition-colors duration-500" />
+                  <h3 className="font-serif text-2xl text-navy group-hover:-translate-y-2 transition-transform duration-300 relative z-10">
+                    {industry.name}
+                  </h3>
+                   <span className="absolute bottom-8 left-0 right-0 text-xs font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 text-navy">
+                      View Case Studies
+                   </span>
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -256,29 +264,29 @@ const Index = () => {
             <div>
               <h3 className="font-serif text-2xl mb-8 tracking-tight">Services</h3>
               <ul className="space-y-4 text-white/60 font-light">
-                <li><a href="#" className="hover:text-white transition-colors">Strategy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Operations</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Analytics</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Implementation</a></li>
+                <li><Link to="/services/strategy" className="hover:text-white transition-colors">Strategy</Link></li>
+                <li><Link to="/services/operations" className="hover:text-white transition-colors">Operations</Link></li>
+                <li><Link to="/services/analytics" className="hover:text-white transition-colors">Analytics</Link></li>
+                <li><Link to="/services/implementation" className="hover:text-white transition-colors">Implementation</Link></li>
               </ul>
             </div>
 
             <div>
               <h3 className="font-serif text-2xl mb-8 tracking-tight">Industries</h3>
               <ul className="space-y-4 text-white/60 font-light">
-                <li><a href="#" className="hover:text-white transition-colors">Financial Services</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Technology</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Manufacturing</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Healthcare</a></li>
+                <li><Link to="/industries/financial-services" className="hover:text-white transition-colors">Financial Services</Link></li>
+                <li><Link to="/industries/technology" className="hover:text-white transition-colors">Technology</Link></li>
+                <li><Link to="/industries/manufacturing" className="hover:text-white transition-colors">Manufacturing</Link></li>
+                <li><Link to="/industries/healthcare" className="hover:text-white transition-colors">Healthcare</Link></li>
               </ul>
             </div>
 
             <div>
               <h3 className="font-serif text-2xl mb-8 tracking-tight">Legal</h3>
               <ul className="space-y-4 text-white/60 font-light">
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Cookie Policy</a></li>
+                <li><Link to="/legal/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+                <li><Link to="/legal/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link></li>
+                <li><Link to="/legal/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link></li>
               </ul>
             </div>
 

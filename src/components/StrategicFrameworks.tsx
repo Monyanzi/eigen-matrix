@@ -2,6 +2,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BarChart3, Settings2, Laptop } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export const StrategicFrameworks = () => {
   return (
@@ -69,9 +70,11 @@ export const StrategicFrameworks = () => {
                       Long-term scenario planning
                     </li>
                   </ul>
-                  <Button className="bg-navy hover:bg-navy-deep text-lg h-12 px-8 group">
-                    Define Your Strategy
-                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                  <Button className="bg-navy hover:bg-navy-deep text-lg h-12 px-8 group" asChild>
+                    <Link to="/services/strategy">
+                      Define Your Strategy
+                      <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                    </Link>
                   </Button>
                 </div>
                 <div className="bg-secondary/30 h-full min-h-[300px] flex items-center justify-center border border-navy/10 rounded-lg p-8">
@@ -107,9 +110,11 @@ export const StrategicFrameworks = () => {
                       Performance metric alignment
                     </li>
                   </ul>
-                  <Button className="bg-navy hover:bg-navy-deep text-lg h-12 px-8 group">
-                    Optimise Operations
-                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                  <Button className="bg-navy hover:bg-navy-deep text-lg h-12 px-8 group" asChild>
+                    <Link to="/services/operations">
+                      Optimise Operations
+                      <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                    </Link>
                   </Button>
                 </div>
                 <div className="bg-secondary/30 h-full min-h-[300px] flex items-center justify-center border border-navy/10 rounded-lg p-8">
@@ -145,9 +150,11 @@ export const StrategicFrameworks = () => {
                       Tech stack modernisation
                     </li>
                   </ul>
-                  <Button className="bg-navy hover:bg-navy-deep text-lg h-12 px-8 group">
-                    Accelerate Innovation
-                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                  <Button className="bg-navy hover:bg-navy-deep text-lg h-12 px-8 group" asChild>
+                    <Link to="/services/digital">
+                      Accelerate Innovation
+                      <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                    </Link>
                   </Button>
                 </div>
                  <div className="bg-secondary/30 h-full min-h-[300px] flex items-center justify-center border border-navy/10 rounded-lg p-8">
