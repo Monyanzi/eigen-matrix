@@ -5,6 +5,7 @@ import { AbstractShape } from '@/components/AbstractShape';
 import { BlueprintDiagram } from '@/components/BlueprintDiagram';
 import { ProfessionalCard } from '@/components/ProfessionalCard';
 import { Button } from '@/components/ui/button';
+import { StrategicFrameworks } from '@/components/StrategicFrameworks';
 
 const Index = () => {
   return (
@@ -128,6 +129,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* STRATEGIC FRAMEWORKS TABS SECTION */}
+      <StrategicFrameworks />
 
       {/* SECTION 3: THE WHY US */}
       <section id="the-firm" className="py-32 px-6">
