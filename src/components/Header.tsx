@@ -1,12 +1,25 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 export const Header = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+
+    if (location.pathname === '/') {
+      scrollToSection(sectionId);
+    } else {
+      navigate('/', { state: { scrollTo: sectionId } });
     }
   };
 
@@ -15,7 +28,7 @@ export const Header = () => {
       className="sticky top-0 z-50 glass-panel"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} // smooth apple-like ease
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
     >
       <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link to="/" className="font-serif font-bold text-2xl tracking-tight text-navy hover:opacity-80 transition-opacity">
@@ -29,6 +42,7 @@ export const Header = () => {
               <a
                 key={item}
                 href={`/#${id}`}
+                onClick={(e) => handleNavClick(e, id)}
                 className="text-sm font-medium text-muted-foreground hover:text-navy transition-colors tracking-wide uppercase"
               >
                 {item}
@@ -46,7 +60,7 @@ export const Header = () => {
             className="bg-navy hover:bg-navy-deep text-white rounded-none px-6 h-10 font-medium tracking-wide transition-all duration-300"
             asChild
           >
-            <a href="/#contact">Inquire</a>
+            <a href="/#contact" onClick={(e) => handleNavClick(e, 'contact')}>Inquire</a>
           </Button>
         </div>
       </nav>
