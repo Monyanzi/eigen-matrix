@@ -1,7 +1,15 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <motion.header
       className="sticky top-0 z-50 glass-panel"
@@ -10,31 +18,35 @@ export const Header = () => {
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} // smooth apple-like ease
     >
       <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <a href="/" className="font-serif font-bold text-2xl tracking-tight text-navy hover:opacity-80 transition-opacity">
+        <Link to="/" className="font-serif font-bold text-2xl tracking-tight text-navy hover:opacity-80 transition-opacity">
           EIGEN
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-10">
-          {['Expertise', 'Industries', 'The Firm', 'Contact'].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase().replace(' ', '-')}`}
-              className="text-sm font-medium text-muted-foreground hover:text-navy transition-colors tracking-wide uppercase"
-            >
-              {item}
-            </a>
-          ))}
+          {['Expertise', 'Industries', 'The Firm', 'Contact'].map((item) => {
+             const id = item.toLowerCase().replace(' ', '-');
+             return (
+              <a
+                key={item}
+                href={`/#${id}`}
+                className="text-sm font-medium text-muted-foreground hover:text-navy transition-colors tracking-wide uppercase"
+              >
+                {item}
+              </a>
+             )
+          })}
         </div>
 
         <div className="flex items-center gap-4">
-          <a href="#" className="text-sm font-medium text-muted-foreground hover:text-navy transition-colors hidden md:block">
+          <Link to="/login" className="text-sm font-medium text-muted-foreground hover:text-navy transition-colors hidden md:block">
             Client Login
-          </a>
+          </Link>
           <Button
             size="sm"
             className="bg-navy hover:bg-navy-deep text-white rounded-none px-6 h-10 font-medium tracking-wide transition-all duration-300"
+            asChild
           >
-            Inquire
+            <a href="/#contact">Inquire</a>
           </Button>
         </div>
       </nav>
