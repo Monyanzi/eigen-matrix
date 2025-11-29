@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, TrendingUp, Database, Target, Check, ChevronRight } from 'lucide-react';
+import { ArrowRight, TrendingUp, Database, Target, Check } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { AbstractShape } from '@/components/AbstractShape';
 import { BlueprintDiagram } from '@/components/BlueprintDiagram';
@@ -7,7 +7,6 @@ import { ProfessionalCard } from '@/components/ProfessionalCard';
 import { Button } from '@/components/ui/button';
 import { StrategicFrameworks } from '@/components/StrategicFrameworks';
 import { AboutUs } from '@/components/AboutUs';
-import { Link } from 'react-router-dom';
 
 const Index = () => {
   return (
@@ -98,9 +97,6 @@ const Index = () => {
                 <p className="text-muted-foreground leading-relaxed flex-grow">
                   Advanced mathematics to pinpoint revenue drivers. We prove causation, not just correlation.
                 </p>
-                <Link to="/services/analytics" className="mt-8 pt-8 border-t border-border flex items-center text-sm font-bold text-navy cursor-pointer group hover:text-navy-deep underline decoration-2 underline-offset-4">
-                  Learn more <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
-                </Link>
               </div>
             </ProfessionalCard>
 
@@ -118,9 +114,6 @@ const Index = () => {
                 <p className="text-muted-foreground leading-relaxed flex-grow">
                   Reorganise operations so every team works towards the same profitable goal.
                 </p>
-                <Link to="/services/operations" className="mt-8 pt-8 border-t border-border flex items-center text-sm font-bold text-navy cursor-pointer group hover:text-navy-deep underline decoration-2 underline-offset-4">
-                  Learn more <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
-                </Link>
               </div>
             </ProfessionalCard>
 
@@ -138,9 +131,6 @@ const Index = () => {
                 <p className="text-muted-foreground leading-relaxed flex-grow">
                   Mathematical proof of where investment delivers strongest returns. No guesswork.
                 </p>
-                <Link to="/services/investment" className="mt-8 pt-8 border-t border-border flex items-center text-sm font-bold text-navy cursor-pointer group hover:text-navy-deep underline decoration-2 underline-offset-4">
-                  Learn more <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
-                </Link>
               </div>
             </ProfessionalCard>
           </div>
@@ -284,10 +274,10 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { name: 'Financial Services', slug: 'financial-services', desc: 'Regulatory compliance meets growth', count: 12 },
-              { name: 'Technology', slug: 'technology', desc: 'Scale without breaking systems', count: 18 },
-              { name: 'Manufacturing', slug: 'manufacturing', desc: 'Operational efficiency gains', count: 9 },
-              { name: 'Healthcare', slug: 'healthcare', desc: 'Patient outcomes + profitability', count: 7 },
+              { name: 'Financial Services', desc: 'Regulatory compliance meets growth' },
+              { name: 'Technology', desc: 'Scale without breaking systems' },
+              { name: 'Manufacturing', desc: 'Operational efficiency gains' },
+              { name: 'Healthcare', desc: 'Patient outcomes + profitability' },
             ].map((industry, i) => (
               <motion.div
                 key={i}
@@ -295,24 +285,15 @@ const Index = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
+                className="group relative bg-white border border-border p-8 flex flex-col justify-between hover:border-navy/30 transition-all duration-300 h-48 overflow-hidden"
               >
-                <Link
-                  to={`/industries/${industry.slug}`}
-                  className="group relative bg-white border border-border p-8 flex flex-col justify-between hover:border-navy/30 transition-all duration-300 h-64 overflow-hidden block"
-                >
-                   <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/5 transition-colors duration-500" />
-                   <div className="relative z-10">
-                     <h3 className="font-serif text-2xl text-navy mb-3 group-hover:-translate-y-1 transition-transform duration-300">
-                       {industry.name}
-                     </h3>
-                     <p className="text-sm text-muted-foreground">{industry.desc}</p>
-                   </div>
-                   <div className="relative z-10">
-                     <span className="text-xs font-bold tracking-widest uppercase text-navy underline decoration-2 underline-offset-4">
-                        View {industry.count} Case Studies →
-                     </span>
-                   </div>
-                </Link>
+                <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/5 transition-colors duration-500" />
+                <div className="relative z-10">
+                  <h3 className="font-serif text-2xl text-navy mb-3 group-hover:-translate-y-1 transition-transform duration-300">
+                    {industry.name}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">{industry.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -325,37 +306,27 @@ const Index = () => {
           <div className="mb-12 pb-12 border-b border-white/10">
             <h3 className="font-serif text-3xl mb-4 tracking-tight">Start Your Transformation</h3>
             <p className="text-xl text-white/80 mb-6 font-light">hello@eigenconsulting.com</p>
-            <p className="text-sm text-white/50 mb-8">As featured in Financial Times, McKinsey Quarterly, Harvard Business Review</p>
-            <Link to="/login" className="text-sm text-white/60 hover:text-white underline underline-offset-4">Client Portal Login</Link>
+            <p className="text-sm text-white/50">As featured in Financial Times, McKinsey Quarterly, Harvard Business Review</p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-12 mb-14">
+          <div className="grid md:grid-cols-3 gap-12 mb-14">
             <div>
               <h3 className="font-serif text-lg mb-5 tracking-tight">Services</h3>
               <ul className="space-y-3 text-white/60 font-light text-sm">
-                <li><Link to="/services/strategy" className="hover:text-white transition-colors">Strategy</Link></li>
-                <li><Link to="/services/operations" className="hover:text-white transition-colors">Operations</Link></li>
-                <li><Link to="/services/analytics" className="hover:text-white transition-colors">Analytics</Link></li>
-                <li><Link to="/services/implementation" className="hover:text-white transition-colors">Implementation</Link></li>
+                <li>Strategy</li>
+                <li>Operations</li>
+                <li>Analytics</li>
+                <li>Implementation</li>
               </ul>
             </div>
 
             <div>
               <h3 className="font-serif text-lg mb-5 tracking-tight">Industries</h3>
               <ul className="space-y-3 text-white/60 font-light text-sm">
-                <li><Link to="/industries/financial-services" className="hover:text-white transition-colors">Financial Services</Link></li>
-                <li><Link to="/industries/technology" className="hover:text-white transition-colors">Technology</Link></li>
-                <li><Link to="/industries/manufacturing" className="hover:text-white transition-colors">Manufacturing</Link></li>
-                <li><Link to="/industries/healthcare" className="hover:text-white transition-colors">Healthcare</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-serif text-lg mb-5 tracking-tight">Legal</h3>
-              <ul className="space-y-3 text-white/60 font-light text-sm">
-                <li><Link to="/legal/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-                <li><Link to="/legal/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link></li>
-                <li><Link to="/legal/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link></li>
+                <li>Financial Services</li>
+                <li>Technology</li>
+                <li>Manufacturing</li>
+                <li>Healthcare</li>
               </ul>
             </div>
 

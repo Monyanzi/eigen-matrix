@@ -36,8 +36,8 @@ export const Header = () => {
         </Link>
 
         <div className="hidden md:flex items-center gap-10">
-          {['Expertise', 'Industries', 'About', 'Contact'].map((item) => {
-             const id = item === 'About' ? 'the-firm' : item.toLowerCase().replace(' ', '-');
+          {['Expertise', 'About', 'Contact'].map((item) => {
+             const id = item.toLowerCase().replace(' ', '-');
              return (
               <a
                 key={item}

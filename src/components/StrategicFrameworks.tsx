@@ -1,8 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, BarChart3, Settings2, Laptop } from "lucide-react";
+import { BarChart3, Settings2, Laptop } from "lucide-react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 export const StrategicFrameworks = () => {
   return (
@@ -56,7 +54,7 @@ export const StrategicFrameworks = () => {
                   <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                     Strategy without rigour is just ambition. We combine deep market intelligence with your internal data to build a roadmap that actually works. By identifying what truly drives your competitive advantage, we help you make bold bets with confidence, not hope.
                   </p>
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-3">
                     <li className="flex items-center text-navy/80">
                       <div className="w-1.5 h-1.5 bg-navy rounded-full mr-3" />
                       Revenue driver identification
@@ -70,12 +68,6 @@ export const StrategicFrameworks = () => {
                       Scenario-based planning framework
                     </li>
                   </ul>
-                  <Button className="bg-navy hover:bg-navy-deep text-lg h-12 px-8 group" asChild>
-                    <Link to="/services/strategy">
-                      Define Your Strategy
-                      <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-                    </Link>
-                  </Button>
                 </div>
                 <div className="bg-secondary/30 h-full min-h-[300px] flex items-center justify-center border border-navy/10 rounded-lg p-8 overflow-hidden">
                   <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Strategic planning session" className="w-full h-full object-cover" />
@@ -93,7 +85,7 @@ export const StrategicFrameworks = () => {
                   <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                     Most organisations operate at 60-70% efficiency. We help you unlock that hidden 30%. Through systematic process redesign and intelligent automation, we help you deliver better results with leaner teams. The result: lower costs, faster execution, and higher profit margins.
                   </p>
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-3">
                      <li className="flex items-center text-navy/80">
                       <div className="w-1.5 h-1.5 bg-navy rounded-full mr-3" />
                       End-to-end process mapping
@@ -107,12 +99,6 @@ export const StrategicFrameworks = () => {
                       KPI alignment and tracking
                     </li>
                   </ul>
-                  <Button className="bg-navy hover:bg-navy-deep text-lg h-12 px-8 group" asChild>
-                    <Link to="/services/operations">
-                      Optimise Operations
-                      <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-                    </Link>
-                  </Button>
                 </div>
                 <div className="bg-secondary/30 h-full min-h-[300px] flex items-center justify-center border border-navy/10 rounded-lg p-8 overflow-hidden">
                   <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Operational efficiency" className="w-full h-full object-cover" />
@@ -130,7 +116,7 @@ export const StrategicFrameworks = () => {
                   <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                     Technology alone doesn't drive growth. The right technology, deployed strategically, does. We help you cut through the noise, identifying which digital investments will genuinely move your business forward. From data infrastructure to automation, we align tech with your business outcomes.
                   </p>
-                   <ul className="space-y-3 mb-8">
+                   <ul className="space-y-3">
                     <li className="flex items-center text-navy/80">
                       <div className="w-1.5 h-1.5 bg-navy rounded-full mr-3" />
                       Business-driven technology strategy
@@ -144,12 +130,6 @@ export const StrategicFrameworks = () => {
                       Change management and adoption
                     </li>
                   </ul>
-                  <Button className="bg-navy hover:bg-navy-deep text-lg h-12 px-8 group" asChild>
-                    <Link to="/services/digital">
-                      Accelerate Innovation
-                      <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-                    </Link>
-                  </Button>
                 </div>
                  <div className="bg-secondary/30 h-full min-h-[300px] flex items-center justify-center border border-navy/10 rounded-lg p-8 overflow-hidden">
                   <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Digital transformation" className="w-full h-full object-cover" />
