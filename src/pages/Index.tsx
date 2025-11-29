@@ -21,12 +21,12 @@ const Index = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <h1 className="font-serif font-semibold text-6xl md:text-7xl lg:text-8xl leading-[1.1] mb-8 tracking-tight text-balance">
-              <span className="text-navy/50">The Science of</span>{" "}
-              <span className="text-navy">Strategic Clarity.</span>
+              <span className="text-navy/50">Transform Complexity</span>{" "}
+              <span className="text-navy">Into Growth.</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12 font-light max-w-xl text-balance">
-              We help enterprise leaders strip away operational noise and scale their fundamental value. Data-driven transformation, without the ambiguity.
+              We help enterprise leaders cut through operational complexity and unlock real value. Data-driven transformation that delivers measurable results, not vague promises.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -68,9 +68,9 @@ const Index = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-             <h4 className="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-4">Methodology</h4>
+             <h4 className="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-4">Our Approach</h4>
             <h2 className="font-serif text-5xl md:text-6xl font-medium text-navy text-balance max-w-3xl">
-              First Principles Thinking for the C-Suite.
+              Rigorous Thinking for Decisive Leadership.
             </h2>
           </motion.div>
 
@@ -81,10 +81,10 @@ const Index = () => {
                   <Database className="w-6 h-6 text-navy" strokeWidth={1} />
                 </div>
                 <h3 className="font-serif text-3xl font-medium text-navy mb-4">
-                  Signal Extraction
+                  Find What Truly Matters
                 </h3>
                 <p className="text-muted-foreground leading-relaxed flex-grow">
-                  We use advanced linear algebra to identify the core drivers of your revenue. Not correlations—causations.
+                  We use advanced mathematics to pinpoint exactly what drives your revenue. We don't just spot patterns, we prove what actually causes growth.
                 </p>
                  <div className="mt-8 pt-8 border-t border-border flex items-center text-sm font-medium text-navy cursor-pointer group">
                   Learn more <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
@@ -98,10 +98,10 @@ const Index = () => {
                   <Target className="w-6 h-6 text-navy" strokeWidth={1} />
                 </div>
                 <h3 className="font-serif text-3xl font-medium text-navy mb-4">
-                  Structural Alignment
+                  Get Everyone Moving Together
                 </h3>
                 <p className="text-muted-foreground leading-relaxed flex-grow">
-                  Reorganizing your operational vectors to move in a single, profitable direction. Eliminating energy loss through misalignment.
+                  We reorganise your operations so every team works towards the same profitable goal. No more wasted effort from teams pulling in different directions.
                 </p>
                 <div className="mt-8 pt-8 border-t border-border flex items-center text-sm font-medium text-navy cursor-pointer group">
                   Learn more <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
@@ -115,10 +115,10 @@ const Index = () => {
                   <TrendingUp className="w-6 h-6 text-navy" strokeWidth={1} />
                 </div>
                 <h3 className="font-serif text-3xl font-medium text-navy mb-4">
-                  Capital Efficiency
+                  Make Every Pound Count
                 </h3>
                 <p className="text-muted-foreground leading-relaxed flex-grow">
-                  Mathematically proving where resource allocation yields the highest variance in growth. Every dollar, justified.
+                  We prove mathematically where your investment will deliver the strongest returns. Every pound you spend is backed by rigorous analysis, not guesswork.
                 </p>
                  <div className="mt-8 pt-8 border-t border-border flex items-center text-sm font-medium text-navy cursor-pointer group">
                   Learn more <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
@@ -143,23 +143,23 @@ const Index = () => {
                 The Laboratory
               </span>
               <h2 className="font-serif text-5xl md:text-6xl font-medium text-navy mb-8 text-balance">
-                Beyond Benchmarks. <br/> Mathematical Certainty.
+                Beyond Benchmarks. <br/> Proven Results.
               </h2>
             </div>
             
             <p className="text-lg text-muted-foreground leading-relaxed mb-6 font-light">
-              Standard consulting relies on case studies and industry averages. Eigen relies on the inherent geometry of your data.
+              Most consultancies rely on case studies and industry averages. We rely on the mathematical structure hidden in your own data.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-10 font-light">
-              We don't guess. We compute. We prove. We deliver mathematical certainty in an uncertain market.
+              We don't guess. We calculate. We prove. We deliver results you can measure and trust, even when markets are uncertain.
             </p>
 
             <div className="space-y-6">
               {[
-                'Eigenvalue decomposition of revenue streams',
-                'Principal component analysis of market variables',
-                'Orthogonal transformation of cost structures',
+                'Eigenvalue analysis to identify your most powerful revenue drivers',
+                'Principal component analysis to simplify complex market data',
+                'Mathematical optimisation of your cost structure',
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -209,10 +209,10 @@ const Index = () => {
             viewport={{ once: true }}
           >
             <h2 className="font-serif text-5xl md:text-6xl font-medium text-navy mb-6">
-              Industries We Transform
+              Industries We Serve
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light">
-              Applying rigorous quantitative methods across sectors where precision matters.
+              Applying rigorous analytical methods across sectors where accuracy drives results.
             </p>
           </motion.div>
 
