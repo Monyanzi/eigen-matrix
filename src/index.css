@@ -8,39 +8,39 @@
   :root {
     /* LIGHT MODE AUTHORITY - Pure Professional */
     --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    --foreground: 222 47% 10%;
     
     /* SECTION BREAKS */
-    --slate-50: 210 40% 98%;
+    --slate-50: 210 20% 98%;
     
-    /* NAVY - Primary Brand */
-    --navy: 222 47% 11%;
-    --navy-deep: 222 84% 5%;
+    /* NAVY - Primary Brand (Richer, Darker) */
+    --navy: 222 47% 12%;       /* Deep Navy */
+    --navy-deep: 222 50% 8%;   /* Almost Black Navy */
     
     /* PROFESSIONAL PALETTE */
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 222 47% 10%;
     
-    --primary: 222 47% 11%;
+    --primary: 222 47% 10%;
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 210 20% 97%;
+    --secondary-foreground: 222 47% 10%;
     
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 10% 45%; /* Neutralized */
     
     --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;
     
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 222 47% 11%;
+    --border: 214 20% 92%;
+    --input: 214 20% 92%;
+    --ring: 222 47% 10%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --radius: 0.375rem;
+    --radius: 0.25rem; /* Sharper corners for a technical feel */
   }
 }
 
@@ -49,34 +49,73 @@
     @apply border-border;
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    ::selection {
+      @apply bg-navy/10 text-navy;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight text-navy;
   }
   
-  /* Premium Typography */
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  /* Premium Typography Utils */
   .serif {
     font-family: 'Playfair Display', Georgia, serif;
   }
   
-  /* Professional Card */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Professional Card - Technical & Clean */
   .professional-card {
-    background: hsl(var(--card));
-    border: 1px solid hsl(var(--border));
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
-    transition: all 0.3s ease;
+    @apply bg-card border border-border/60 transition-all duration-500 ease-out;
+    position: relative;
+    overflow: hidden;
   }
   
+  .professional-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0,0,0,0.02), transparent 40%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+  }
+
   .professional-card:hover {
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    @apply border-navy/20 -translate-y-1 shadow-lg shadow-navy/5;
+  }
+
+  .professional-card:hover::before {
+    opacity: 1;
+  }
+
+  /* Glass Panel - Frosted Effect */
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-md border-b border-white/20 supports-[backdrop-filter]:bg-white/60;
   }
   
   /* Subtle Section Break */
   .section-break {
-    background: hsl(var(--slate-50));
+    background: linear-gradient(to bottom, transparent, hsl(var(--slate-50)) 20%, hsl(var(--slate-50)) 80%, transparent);
   }
   
   /* Blueprint Line Effect */
@@ -84,16 +123,6 @@
     stroke: hsl(var(--navy));
     stroke-width: 1;
     fill: none;
-    opacity: 0.3;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground;
+    opacity: 0.2;
   }
 }
