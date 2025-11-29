@@ -23,11 +23,13 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
+            <p className="text-xs font-bold tracking-widest uppercase text-navy/60 mb-6">Trusted by Fortune 500 Leaders</p>
+
             <h1 className="font-serif font-semibold text-6xl md:text-7xl lg:text-8xl leading-[1.1] mb-8 tracking-tight text-balance">
               <span className="text-navy/50">Transform Complexity</span>{" "}
               <span className="text-navy">Into Growth.</span>
             </h1>
-            
+
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12 font-light max-w-xl text-balance">
               We help enterprise leaders cut through operational complexity and unlock real value. Data-driven transformation that delivers measurable results, not vague promises.
             </p>
@@ -35,7 +37,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className="bg-navy hover:bg-navy-deep text-lg px-8 h-14 group rounded-none"
+                className="bg-navy hover:bg-navy-deep text-lg px-10 h-16 group rounded-none shadow-lg shadow-navy/20"
                 asChild
               >
                 <a href="#expertise">
@@ -44,12 +46,12 @@ const Index = () => {
                 </a>
               </Button>
                <Button
-                variant="ghost"
+                variant="outline"
                 size="lg"
-                className="text-navy hover:bg-navy/5 text-lg px-8 h-14 group rounded-none"
+                className="border-2 border-navy/20 text-navy hover:bg-navy/5 text-lg px-10 h-16 group rounded-none"
                 asChild
               >
-                <a href="#the-firm">Read The Manifesto</a>
+                <a href="#the-firm">Our Approach</a>
               </Button>
             </div>
           </motion.div>
@@ -84,16 +86,19 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <ProfessionalCard delay={0.1}>
               <div className="flex flex-col h-full">
-                <div className="w-14 h-14 border border-navy/10 flex items-center justify-center mb-8 bg-background">
-                  <Database className="w-6 h-6 text-navy" strokeWidth={1} />
+                <div className="flex items-start justify-between mb-6">
+                  <div className="w-14 h-14 border border-navy/10 flex items-center justify-center bg-background">
+                    <Database className="w-6 h-6 text-navy" strokeWidth={1} />
+                  </div>
+                  <span className="font-mono text-sm text-navy/40">01</span>
                 </div>
                 <h3 className="font-serif text-3xl font-medium text-navy mb-4">
                   Find What Truly Matters
                 </h3>
                 <p className="text-muted-foreground leading-relaxed flex-grow">
-                  We use advanced mathematics to pinpoint exactly what drives your revenue. We don't just spot patterns, we prove what actually causes growth.
+                  Advanced mathematics to pinpoint revenue drivers. We prove causation, not just correlation.
                 </p>
-                <Link to="/services/analytics" className="mt-8 pt-8 border-t border-border flex items-center text-sm font-medium text-navy cursor-pointer group hover:text-navy-deep">
+                <Link to="/services/analytics" className="mt-8 pt-8 border-t border-border flex items-center text-sm font-bold text-navy cursor-pointer group hover:text-navy-deep underline decoration-2 underline-offset-4">
                   Learn more <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -101,16 +106,19 @@ const Index = () => {
 
             <ProfessionalCard delay={0.2}>
               <div className="flex flex-col h-full">
-                <div className="w-14 h-14 border border-navy/10 flex items-center justify-center mb-8 bg-background">
-                  <Target className="w-6 h-6 text-navy" strokeWidth={1} />
+                <div className="flex items-start justify-between mb-6">
+                  <div className="w-14 h-14 border border-navy/10 flex items-center justify-center bg-background">
+                    <Target className="w-6 h-6 text-navy" strokeWidth={1} />
+                  </div>
+                  <span className="font-mono text-sm text-navy/40">02</span>
                 </div>
                 <h3 className="font-serif text-3xl font-medium text-navy mb-4">
                   Get Everyone Moving Together
                 </h3>
                 <p className="text-muted-foreground leading-relaxed flex-grow">
-                  We reorganise your operations so every team works towards the same profitable goal. No more wasted effort from teams pulling in different directions.
+                  Reorganise operations so every team works towards the same profitable goal.
                 </p>
-                <Link to="/services/operations" className="mt-8 pt-8 border-t border-border flex items-center text-sm font-medium text-navy cursor-pointer group hover:text-navy-deep">
+                <Link to="/services/operations" className="mt-8 pt-8 border-t border-border flex items-center text-sm font-bold text-navy cursor-pointer group hover:text-navy-deep underline decoration-2 underline-offset-4">
                   Learn more <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -118,16 +126,19 @@ const Index = () => {
 
             <ProfessionalCard delay={0.3}>
               <div className="flex flex-col h-full">
-                <div className="w-14 h-14 border border-navy/10 flex items-center justify-center mb-8 bg-background">
-                  <TrendingUp className="w-6 h-6 text-navy" strokeWidth={1} />
+                <div className="flex items-start justify-between mb-6">
+                  <div className="w-14 h-14 border border-navy/10 flex items-center justify-center bg-background">
+                    <TrendingUp className="w-6 h-6 text-navy" strokeWidth={1} />
+                  </div>
+                  <span className="font-mono text-sm text-navy/40">03</span>
                 </div>
                 <h3 className="font-serif text-3xl font-medium text-navy mb-4">
                   Make Every Pound Count
                 </h3>
                 <p className="text-muted-foreground leading-relaxed flex-grow">
-                  We prove mathematically where your investment will deliver the strongest returns. Every pound you spend is backed by rigorous analysis, not guesswork.
+                  Mathematical proof of where investment delivers strongest returns. No guesswork.
                 </p>
-                <Link to="/services/investment" className="mt-8 pt-8 border-t border-border flex items-center text-sm font-medium text-navy cursor-pointer group hover:text-navy-deep">
+                <Link to="/services/investment" className="mt-8 pt-8 border-t border-border flex items-center text-sm font-bold text-navy cursor-pointer group hover:text-navy-deep underline decoration-2 underline-offset-4">
                   Learn more <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -140,7 +151,7 @@ const Index = () => {
       <StrategicFrameworks />
 
       {/* PROMINENT MID-PAGE CTA SECTION */}
-      <section className="py-20 px-6 bg-navy text-white">
+      <section className="py-24 px-6 bg-navy text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -148,27 +159,30 @@ const Index = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-serif text-4xl md:text-5xl font-medium mb-6 text-balance">
-              Ready to Transform Your Business?
+            <h2 className="font-serif text-4xl md:text-5xl font-medium mb-4 text-balance">
+              Get Your Complimentary Strategic Audit
             </h2>
-            <p className="text-xl text-white/80 mb-10 font-light max-w-2xl mx-auto">
-              Let's discuss how rigorous analysis and strategic thinking can unlock real growth for your organisation.
+            <p className="text-lg text-white/70 mb-3 font-light">
+              30-minute consultation with no commitment
+            </p>
+            <p className="text-sm text-white/50 mb-10 uppercase tracking-wide">
+              Limited to 3 audits per month
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-white hover:bg-white/90 text-navy text-lg px-8 h-14 group rounded-none"
+                className="bg-white hover:bg-white/90 text-navy text-lg px-10 h-16 group rounded-none shadow-xl"
                 asChild
               >
                 <a href="#contact">
-                  Schedule a Consultation
+                  Claim Your Audit
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
                 </a>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white/10 text-lg px-8 h-14 rounded-none"
+                className="border-2 border-white text-white hover:bg-white/10 text-lg px-10 h-16 rounded-none"
                 asChild
               >
                 <a href="#expertise">View Our Approach</a>
@@ -270,10 +284,10 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { name: 'Financial Services', slug: 'financial-services' },
-              { name: 'Technology', slug: 'technology' },
-              { name: 'Manufacturing', slug: 'manufacturing' },
-              { name: 'Healthcare', slug: 'healthcare' },
+              { name: 'Financial Services', slug: 'financial-services', desc: 'Regulatory compliance meets growth', count: 12 },
+              { name: 'Technology', slug: 'technology', desc: 'Scale without breaking systems', count: 18 },
+              { name: 'Manufacturing', slug: 'manufacturing', desc: 'Operational efficiency gains', count: 9 },
+              { name: 'Healthcare', slug: 'healthcare', desc: 'Patient outcomes + profitability', count: 7 },
             ].map((industry, i) => (
               <motion.div
                 key={i}
@@ -284,15 +298,20 @@ const Index = () => {
               >
                 <Link
                   to={`/industries/${industry.slug}`}
-                  className="group relative bg-white border border-border p-10 flex items-center justify-center text-center hover:border-navy/30 transition-all duration-300 h-64 overflow-hidden block"
+                  className="group relative bg-white border border-border p-8 flex flex-col justify-between hover:border-navy/30 transition-all duration-300 h-64 overflow-hidden block"
                 >
                    <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/5 transition-colors duration-500" />
-                  <h3 className="font-serif text-2xl text-navy group-hover:-translate-y-2 transition-transform duration-300 relative z-10">
-                    {industry.name}
-                  </h3>
-                   <span className="absolute bottom-8 left-0 right-0 text-xs font-bold tracking-widest uppercase opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 text-navy">
-                      View Case Studies
-                   </span>
+                   <div className="relative z-10">
+                     <h3 className="font-serif text-2xl text-navy mb-3 group-hover:-translate-y-1 transition-transform duration-300">
+                       {industry.name}
+                     </h3>
+                     <p className="text-sm text-muted-foreground">{industry.desc}</p>
+                   </div>
+                   <div className="relative z-10">
+                     <span className="text-xs font-bold tracking-widest uppercase text-navy underline decoration-2 underline-offset-4">
+                        View {industry.count} Case Studies →
+                     </span>
+                   </div>
                 </Link>
               </motion.div>
             ))}
@@ -301,12 +320,19 @@ const Index = () => {
       </section>
 
       {/* FOOTER */}
-      <footer id="contact" className="bg-navy-deep text-white py-24 px-6 border-t border-white/5">
+      <footer id="contact" className="bg-navy-deep text-white py-20 px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-16 mb-20">
+          <div className="mb-12 pb-12 border-b border-white/10">
+            <h3 className="font-serif text-3xl mb-4 tracking-tight">Start Your Transformation</h3>
+            <p className="text-xl text-white/80 mb-6 font-light">hello@eigenconsulting.com</p>
+            <p className="text-sm text-white/50 mb-8">As featured in Financial Times, McKinsey Quarterly, Harvard Business Review</p>
+            <Link to="/login" className="text-sm text-white/60 hover:text-white underline underline-offset-4">Client Portal Login</Link>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-12 mb-14">
             <div>
-              <h3 className="font-serif text-2xl mb-8 tracking-tight">Services</h3>
-              <ul className="space-y-4 text-white/60 font-light">
+              <h3 className="font-serif text-lg mb-5 tracking-tight">Services</h3>
+              <ul className="space-y-3 text-white/60 font-light text-sm">
                 <li><Link to="/services/strategy" className="hover:text-white transition-colors">Strategy</Link></li>
                 <li><Link to="/services/operations" className="hover:text-white transition-colors">Operations</Link></li>
                 <li><Link to="/services/analytics" className="hover:text-white transition-colors">Analytics</Link></li>
@@ -315,8 +341,8 @@ const Index = () => {
             </div>
 
             <div>
-              <h3 className="font-serif text-2xl mb-8 tracking-tight">Industries</h3>
-              <ul className="space-y-4 text-white/60 font-light">
+              <h3 className="font-serif text-lg mb-5 tracking-tight">Industries</h3>
+              <ul className="space-y-3 text-white/60 font-light text-sm">
                 <li><Link to="/industries/financial-services" className="hover:text-white transition-colors">Financial Services</Link></li>
                 <li><Link to="/industries/technology" className="hover:text-white transition-colors">Technology</Link></li>
                 <li><Link to="/industries/manufacturing" className="hover:text-white transition-colors">Manufacturing</Link></li>
@@ -325,8 +351,8 @@ const Index = () => {
             </div>
 
             <div>
-              <h3 className="font-serif text-2xl mb-8 tracking-tight">Legal</h3>
-              <ul className="space-y-4 text-white/60 font-light">
+              <h3 className="font-serif text-lg mb-5 tracking-tight">Legal</h3>
+              <ul className="space-y-3 text-white/60 font-light text-sm">
                 <li><Link to="/legal/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
                 <li><Link to="/legal/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link></li>
                 <li><Link to="/legal/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link></li>
@@ -334,8 +360,8 @@ const Index = () => {
             </div>
 
             <div>
-              <h3 className="font-serif text-2xl mb-8 tracking-tight">Johannesburg</h3>
-              <p className="text-white/60 leading-relaxed mb-4 font-light">
+              <h3 className="font-serif text-lg mb-5 tracking-tight">Johannesburg</h3>
+              <p className="text-white/60 leading-relaxed mb-3 font-light text-sm">
                 Sandton City<br />
                 Johannesburg, 2196<br />
                 South Africa
@@ -346,9 +372,9 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="pt-8 border-t border-white/10">
+          <div className="pt-6 border-t border-white/10">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="font-serif font-bold text-3xl tracking-tighter">EIGEN</p>
+              <p className="font-serif font-bold text-2xl tracking-tighter">EIGEN</p>
               <p className="text-xs text-white/40 uppercase tracking-widest">
                 © {new Date().getFullYear()} Eigen Consulting. All rights reserved.
               </p>

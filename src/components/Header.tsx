@@ -36,8 +36,8 @@ export const Header = () => {
         </Link>
 
         <div className="hidden md:flex items-center gap-10">
-          {['Expertise', 'Industries', 'The Firm', 'Contact'].map((item) => {
-             const id = item.toLowerCase().replace(' ', '-');
+          {['Expertise', 'Industries', 'About', 'Contact'].map((item) => {
+             const id = item === 'About' ? 'the-firm' : item.toLowerCase().replace(' ', '-');
              return (
               <a
                 key={item}
@@ -54,10 +54,10 @@ export const Header = () => {
         <div className="flex items-center gap-4">
           <Button
             size="sm"
-            className="bg-navy hover:bg-navy-deep text-white rounded-none px-6 h-10 font-medium tracking-wide transition-all duration-300"
+            className="bg-navy hover:bg-navy-deep text-white rounded-none px-8 h-12 font-medium tracking-wide transition-all duration-300 shadow-lg shadow-navy/20"
             asChild
           >
-            <a href="/#contact" onClick={(e) => handleNavClick(e, 'contact')}>Inquire</a>
+            <a href="/#contact" onClick={(e) => handleNavClick(e, 'contact')}>Get Audit</a>
           </Button>
         </div>
       </nav>
