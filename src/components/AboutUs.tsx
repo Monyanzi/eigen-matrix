@@ -21,50 +21,54 @@ export const AboutUs = () => {
           </p>
         </motion.div>
 
-        <Tabs defaultValue="team" className="w-full max-w-6xl mx-auto">
-          <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 h-auto gap-4 bg-transparent p-0 mb-12">
+        <Tabs defaultValue="team" className="w-full max-w-[1200px] mx-auto">
+          <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 h-auto gap-8 bg-transparent p-0 mb-16">
             <TabsTrigger
               value="team"
-              className="data-[state=active]:bg-navy data-[state=active]:text-white bg-white border border-border h-14 text-lg font-medium transition-all duration-300 shadow-sm"
+              className="data-[state=active]:bg-navy data-[state=active]:text-white data-[state=active]:shadow-lg bg-white border border-border h-20 text-lg font-medium transition-all duration-300 hover:border-navy/50"
             >
               Our Team
             </TabsTrigger>
             <TabsTrigger
               value="process"
-              className="data-[state=active]:bg-navy data-[state=active]:text-white bg-white border border-border h-14 text-lg font-medium transition-all duration-300 shadow-sm"
+              className="data-[state=active]:bg-navy data-[state=active]:text-white data-[state=active]:shadow-lg bg-white border border-border h-20 text-lg font-medium transition-all duration-300 hover:border-navy/50"
             >
               Our Process
             </TabsTrigger>
             <TabsTrigger
               value="results"
-              className="data-[state=active]:bg-navy data-[state=active]:text-white bg-white border border-border h-14 text-lg font-medium transition-all duration-300 shadow-sm"
+              className="data-[state=active]:bg-navy data-[state=active]:text-white data-[state=active]:shadow-lg bg-white border border-border h-20 text-lg font-medium transition-all duration-300 hover:border-navy/50"
             >
               Our Results
             </TabsTrigger>
           </TabsList>
 
-          <div className="bg-white border border-border p-8 md:p-12 shadow-sm min-h-[500px]">
-            <TabsContent value="team" className="mt-0 animate-in fade-in-50 duration-500">
-              <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="relative">
+            <TabsContent value="team" className="mt-0 animate-in fade-in-50 slide-in-from-bottom-4 duration-500">
+              <div className="grid lg:grid-cols-2 gap-16 items-center bg-white p-12 border border-border shadow-xl shadow-black/5">
                 <div>
-                  <div className="w-12 h-12 bg-navy/10 flex items-center justify-center rounded-lg mb-6">
-                    <Users className="w-6 h-6 text-navy" />
+                   <div className="flex items-center gap-4 mb-8">
+                     <div className="w-12 h-12 bg-navy text-white flex items-center justify-center">
+                        <Users className="w-6 h-6" />
+                     </div>
+                     <span className="text-sm font-bold tracking-widest uppercase text-navy/50">Why Us 01</span>
                   </div>
-                  <h3 className="font-serif text-3xl text-navy mb-6">Deep Analytical Expertise</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+
+                  <h3 className="font-serif text-4xl text-navy mb-6 leading-tight">Deep Analytical Expertise</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-10">
                     Our consultants combine decades of Fortune 500 experience with advanced degrees in mathematics, economics, and engineering.
                   </p>
-                  <div className="grid grid-cols-3 gap-6 mb-8 pb-8 border-b border-border">
+                  <div className="grid grid-cols-3 gap-8 mb-8 pb-8 border-b border-border">
                     <div>
-                      <p className="font-mono text-3xl font-bold text-navy mb-1">75+</p>
+                      <p className="font-mono text-4xl font-bold text-navy mb-2">75+</p>
                       <p className="text-sm text-muted-foreground uppercase tracking-wide">Years Combined</p>
                     </div>
                     <div>
-                      <p className="font-mono text-3xl font-bold text-navy mb-1">12</p>
+                      <p className="font-mono text-4xl font-bold text-navy mb-2">12</p>
                       <p className="text-sm text-muted-foreground uppercase tracking-wide">Industries</p>
                     </div>
                     <div>
-                      <p className="font-mono text-3xl font-bold text-navy mb-1">3</p>
+                      <p className="font-mono text-4xl font-bold text-navy mb-2">3</p>
                       <p className="text-sm text-muted-foreground uppercase tracking-wide">Continents</p>
                     </div>
                   </div>
@@ -72,68 +76,78 @@ export const AboutUs = () => {
                     We speak the language of enterprise leadership because we've been in your position.
                   </p>
                 </div>
-                <div className="bg-secondary/30 h-full min-h-[400px] flex items-center justify-center border border-navy/10 rounded-lg overflow-hidden">
-                  <img
-                    src="https://images.pexels.com/photos/3862134/pexels-photo-3862134.jpeg?auto=compress&cs=tinysrgb&w=600"
+                <div className="relative h-[500px] w-full bg-secondary/20 overflow-hidden">
+                   <div className="absolute inset-0 bg-navy/10 mix-blend-multiply z-10" />
+                   <img
+                    src="https://images.pexels.com/photos/3862134/pexels-photo-3862134.jpeg?auto=compress&cs=tinysrgb&w=800"
                     alt="Professional team collaboration"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>
               </div>
             </TabsContent>
 
-            <TabsContent value="process" className="mt-0 animate-in fade-in-50 duration-500">
-              <div className="grid md:grid-cols-2 gap-12 items-start">
+            <TabsContent value="process" className="mt-0 animate-in fade-in-50 slide-in-from-bottom-4 duration-500">
+              <div className="grid lg:grid-cols-2 gap-16 items-center bg-white p-12 border border-border shadow-xl shadow-black/5">
                 <div>
-                  <div className="w-12 h-12 bg-navy/10 flex items-center justify-center rounded-lg mb-6">
-                    <Target className="w-6 h-6 text-navy" />
+                   <div className="flex items-center gap-4 mb-8">
+                     <div className="w-12 h-12 bg-navy text-white flex items-center justify-center">
+                        <Target className="w-6 h-6" />
+                     </div>
+                     <span className="text-sm font-bold tracking-widest uppercase text-navy/50">Why Us 02</span>
                   </div>
-                  <h3 className="font-serif text-3xl text-navy mb-6">Mathematical Rigour</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+
+                  <h3 className="font-serif text-4xl text-navy mb-6 leading-tight">Mathematical Rigour</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-10">
                     Our proprietary frameworks are built on proven mathematical principles, not management fads.
                   </p>
-                  <div className="space-y-6">
-                    <div className="border-l-4 border-navy pl-6">
-                      <h4 className="font-serif text-xl text-navy mb-2">1. Discovery</h4>
-                      <p className="text-muted-foreground">Deep data analysis to isolate your true value drivers</p>
+                  <div className="space-y-8">
+                    <div className="border-l-4 border-navy pl-6 group">
+                      <h4 className="font-serif text-2xl text-navy mb-2 group-hover:translate-x-1 transition-transform">1. Discovery</h4>
+                      <p className="text-muted-foreground text-lg">Deep data analysis to isolate your true value drivers</p>
                     </div>
-                    <div className="border-l-4 border-navy pl-6">
-                      <h4 className="font-serif text-xl text-navy mb-2">2. Design</h4>
-                      <p className="text-muted-foreground">Custom frameworks tailored to your specific challenges</p>
+                    <div className="border-l-4 border-navy/30 pl-6 group hover:border-navy transition-colors">
+                      <h4 className="font-serif text-2xl text-navy mb-2 group-hover:translate-x-1 transition-transform">2. Design</h4>
+                      <p className="text-muted-foreground text-lg">Custom frameworks tailored to your specific challenges</p>
                     </div>
-                    <div className="border-l-4 border-navy pl-6">
-                      <h4 className="font-serif text-xl text-navy mb-2">3. Delivery</h4>
-                      <p className="text-muted-foreground">Hands-on implementation with measurable milestones</p>
+                    <div className="border-l-4 border-navy/30 pl-6 group hover:border-navy transition-colors">
+                      <h4 className="font-serif text-2xl text-navy mb-2 group-hover:translate-x-1 transition-transform">3. Delivery</h4>
+                      <p className="text-muted-foreground text-lg">Hands-on implementation with measurable milestones</p>
                     </div>
                   </div>
                 </div>
-                <div className="bg-secondary/30 h-full min-h-[400px] flex items-center justify-center border border-navy/10 rounded-lg overflow-hidden">
-                  <img
-                    src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600"
+                <div className="relative h-[500px] w-full bg-secondary/20 overflow-hidden">
+                   <div className="absolute inset-0 bg-navy/10 mix-blend-multiply z-10" />
+                   <img
+                    src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800"
                     alt="Strategic process visualization"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>
               </div>
             </TabsContent>
 
-            <TabsContent value="results" className="mt-0 animate-in fade-in-50 duration-500">
-              <div className="grid md:grid-cols-2 gap-12 items-start">
+            <TabsContent value="results" className="mt-0 animate-in fade-in-50 slide-in-from-bottom-4 duration-500">
+              <div className="grid lg:grid-cols-2 gap-16 items-center bg-white p-12 border border-border shadow-xl shadow-black/5">
                 <div>
-                  <div className="w-12 h-12 bg-navy/10 flex items-center justify-center rounded-lg mb-6">
-                    <TrendingUp className="w-6 h-6 text-navy" />
+                  <div className="flex items-center gap-4 mb-8">
+                     <div className="w-12 h-12 bg-navy text-white flex items-center justify-center">
+                        <TrendingUp className="w-6 h-6" />
+                     </div>
+                     <span className="text-sm font-bold tracking-widest uppercase text-navy/50">Why Us 03</span>
                   </div>
-                  <h3 className="font-serif text-3xl text-navy mb-6">Measurable Impact</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+
+                  <h3 className="font-serif text-4xl text-navy mb-6 leading-tight">Measurable Impact</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-10">
                     We deliver outcomes you can track, quantify, and present to your board with confidence.
                   </p>
                   <div className="grid grid-cols-2 gap-8 mb-8 pb-8 border-b border-border">
                     <div>
-                      <p className="font-mono text-4xl font-bold text-navy mb-2">89%</p>
+                      <p className="font-mono text-5xl font-bold text-navy mb-2">89%</p>
                       <p className="text-sm text-muted-foreground uppercase tracking-wide">Avg ROI Increase</p>
                     </div>
                     <div>
-                      <p className="font-mono text-4xl font-bold text-navy mb-2">150+</p>
+                      <p className="font-mono text-5xl font-bold text-navy mb-2">150+</p>
                       <p className="text-sm text-muted-foreground uppercase tracking-wide">Projects Delivered</p>
                     </div>
                   </div>
@@ -141,11 +155,12 @@ export const AboutUs = () => {
                     Every engagement includes clear KPIs, regular reporting, and post-implementation validation to ensure sustained results.
                   </p>
                 </div>
-                <div className="bg-secondary/30 h-full min-h-[400px] flex items-center justify-center border border-navy/10 rounded-lg overflow-hidden">
-                  <img
-                    src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600"
+                 <div className="relative h-[500px] w-full bg-secondary/20 overflow-hidden">
+                   <div className="absolute inset-0 bg-navy/10 mix-blend-multiply z-10" />
+                   <img
+                    src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800"
                     alt="Results and performance metrics"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                   />
                 </div>
               </div>

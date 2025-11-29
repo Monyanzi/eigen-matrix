@@ -110,7 +110,7 @@
 
   /* Glass Panel - Frosted Effect */
   .glass-panel {
-    @apply bg-white/80 backdrop-blur-md border-b border-white/20 supports-[backdrop-filter]:bg-white/60;
+    @apply bg-white/90 backdrop-blur-xl border-b border-white/20 supports-[backdrop-filter]:bg-white/80;
   }
   
   /* Subtle Section Break */
@@ -124,5 +124,18 @@
     stroke-width: 1;
     fill: none;
     opacity: 0.2;
+  }
+
+  /* Custom Scrollbar for a polished feel */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/20 rounded-full hover:bg-muted-foreground/40 transition-colors;
   }
 }
