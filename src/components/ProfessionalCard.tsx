@@ -31,16 +31,10 @@ export const ProfessionalCard = ({ children, className = '', delay = 0 }: Profes
         "--mouse-y": useMotionTemplate`${mouseY}px`,
       }}
     >
-      <div
+      <motion.div
         className="pointer-events-none absolute -inset-px rounded-none opacity-0 transition duration-300 group-hover:opacity-100"
         style={{
-          background: useMotionTemplate`
-            radial-gradient(
-              650px circle at ${mouseX}px ${mouseY}px,
-              rgba(10, 30, 60, 0.04),
-              transparent 80%
-            )
-          `,
+          background: useMotionTemplate`radial-gradient(650px circle at ${mouseX}px ${mouseY}px, rgba(10, 30, 60, 0.04), transparent 80%)`,
         }}
       />
       <div className="relative z-10 h-full">{children}</div>
