@@ -1,13 +1,9 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, TrendingUp, Database, Target, Check } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { AbstractShape } from '@/components/AbstractShape';
-import { BlueprintDiagram } from '@/components/BlueprintDiagram';
-import { ProfessionalCard } from '@/components/ProfessionalCard';
 import { Button } from '@/components/ui/button';
-import { StrategicFrameworks } from '@/components/StrategicFrameworks';
-import { AboutUs } from '@/components/AboutUs';
 
 const Index = () => {
   return (
@@ -43,13 +39,13 @@ const Index = () => {
                 className="bg-navy hover:bg-navy-deep text-lg px-12 h-16 group rounded-none shadow-xl shadow-navy/10 relative overflow-hidden"
                 asChild
               >
-                <a href="#expertise">
+                <Link to="/expertise">
                    <span className="relative z-10 flex items-center">
                       View Our Expertise
                       <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" size={20} />
                    </span>
                    <span className="absolute inset-0 bg-navy-deep translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                </a>
+                </Link>
               </Button>
                <Button
                 variant="outline"
@@ -57,7 +53,7 @@ const Index = () => {
                 className="border border-navy/20 text-navy hover:bg-navy text-lg px-12 h-16 group rounded-none hover:text-white transition-all duration-300"
                 asChild
               >
-                <a href="#the-firm">Our Approach</a>
+                <Link to="/about">Our Approach</Link>
               </Button>
             </div>
           </motion.div>
@@ -73,80 +69,6 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
-
-      {/* SECTION 2: TRUST & CLARITY */}
-      <section id="expertise" className="py-32 px-6 section-break">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            className="mb-20"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-             <h4 className="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-4">Our Approach</h4>
-            <h2 className="font-serif text-5xl md:text-6xl font-medium text-navy text-balance max-w-3xl">
-              Rigorous Thinking for Decisive Leadership.
-            </h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <ProfessionalCard delay={0.1}>
-              <div className="flex flex-col h-full">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="w-14 h-14 border border-navy/10 flex items-center justify-center bg-background">
-                    <Database className="w-6 h-6 text-navy" strokeWidth={1} />
-                  </div>
-                  <span className="font-mono text-sm text-navy/40">01</span>
-                </div>
-                <h3 className="font-serif text-3xl font-medium text-navy mb-4">
-                  Find What Truly Matters
-                </h3>
-                <p className="text-muted-foreground leading-relaxed flex-grow">
-                  Advanced mathematics to pinpoint revenue drivers. We prove causation, not just correlation.
-                </p>
-              </div>
-            </ProfessionalCard>
-
-            <ProfessionalCard delay={0.2}>
-              <div className="flex flex-col h-full">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="w-14 h-14 border border-navy/10 flex items-center justify-center bg-background">
-                    <Target className="w-6 h-6 text-navy" strokeWidth={1} />
-                  </div>
-                  <span className="font-mono text-sm text-navy/40">02</span>
-                </div>
-                <h3 className="font-serif text-3xl font-medium text-navy mb-4">
-                  Get Everyone Moving Together
-                </h3>
-                <p className="text-muted-foreground leading-relaxed flex-grow">
-                  Reorganise operations so every team works towards the same profitable goal.
-                </p>
-              </div>
-            </ProfessionalCard>
-
-            <ProfessionalCard delay={0.3}>
-              <div className="flex flex-col h-full">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="w-14 h-14 border border-navy/10 flex items-center justify-center bg-background">
-                    <TrendingUp className="w-6 h-6 text-navy" strokeWidth={1} />
-                  </div>
-                  <span className="font-mono text-sm text-navy/40">03</span>
-                </div>
-                <h3 className="font-serif text-3xl font-medium text-navy mb-4">
-                  Make Every Pound Count
-                </h3>
-                <p className="text-muted-foreground leading-relaxed flex-grow">
-                  Mathematical proof of where investment delivers strongest returns. No guesswork.
-                </p>
-              </div>
-            </ProfessionalCard>
-          </div>
-        </div>
-      </section>
-
-      {/* STRATEGIC FRAMEWORKS TABS SECTION */}
-      <StrategicFrameworks />
 
       {/* PROMINENT MID-PAGE CTA SECTION */}
       <section className="py-24 px-6 bg-navy text-white">
@@ -172,10 +94,10 @@ const Index = () => {
                 className="bg-white hover:bg-white/90 text-navy text-lg px-10 h-16 group rounded-none shadow-xl"
                 asChild
               >
-                <a href="#contact">
+                <Link to="/contact">
                   Claim Your Audit
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-                </a>
+                </Link>
               </Button>
               <Button
                 variant="outline"
@@ -183,158 +105,15 @@ const Index = () => {
                 className="border-2 border-white text-white hover:bg-white/10 text-lg px-10 h-16 rounded-none"
                 asChild
               >
-                <a href="#expertise">View Our Approach</a>
+                <Link to="/expertise">View Our Approach</Link>
               </Button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* ABOUT US SECTION */}
-      <AboutUs />
-
-      {/* SECTION 3: THE WHY US */}
-      <section id="the-firm" className="py-32 px-6 bg-slate-50">
-        <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 gap-24 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <div className="mb-10">
-              <div className="inline-flex items-center gap-2 px-3 py-1 border border-navy/20 bg-white text-navy text-xs font-bold tracking-widest uppercase mb-6 rounded-full">
-                <span className="w-2 h-2 rounded-full bg-navy animate-pulse" />
-                The Laboratory
-              </div>
-              <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl font-medium text-navy mb-8 text-balance leading-tight">
-                Beyond Benchmarks. <br/> Proven Results.
-              </h2>
-            </div>
-            
-            <p className="text-xl text-muted-foreground leading-relaxed mb-6 font-light">
-              Most consultancies rely on case studies and industry averages. We rely on the mathematical structure hidden in your own data.
-            </p>
-
-            <p className="text-xl text-muted-foreground leading-relaxed mb-12 font-light">
-              We don't guess. We calculate. We prove. We deliver results you can measure and trust, even when markets are uncertain.
-            </p>
-
-            <div className="space-y-8">
-              {[
-                'Eigenvalue analysis to identify your most powerful revenue drivers',
-                'Principal component analysis to simplify complex market data',
-                'Mathematical optimisation of your cost structure',
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  className="flex items-center gap-6 group cursor-default"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 + i * 0.1 }}
-                >
-                  <div className="w-10 h-10 rounded-full border border-navy/20 flex items-center justify-center text-navy bg-white group-hover:bg-navy group-hover:text-white transition-all duration-300 shadow-sm">
-                     <Check size={16} />
-                  </div>
-                  <p className="text-navy text-lg font-medium group-hover:translate-x-1 transition-transform duration-300">{item}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            className="bg-white border border-border p-16 shadow-2xl shadow-navy/5 relative overflow-hidden"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          >
-            {/* Grid Background */}
-            <div className="absolute inset-0 z-0 opacity-20"
-                 style={{ backgroundImage: 'radial-gradient(#1e293b 1px, transparent 1px)', backgroundSize: '30px 30px' }}
-            />
-
-            {/* Decorative corners */}
-            <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-navy z-10" />
-            <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-navy z-10" />
-            <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-navy z-10" />
-            <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-navy z-10" />
-
-            <div className="relative z-10">
-                <BlueprintDiagram />
-            </div>
-
-            <div className="mt-10 text-center relative z-10">
-                 <div className="inline-block px-4 py-1 bg-navy/5 border border-navy/10 rounded-full">
-                    <p className="font-mono text-xs tracking-widest text-navy/70 uppercase">Figure 1.1: Signal Isolation</p>
-                 </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* SECTION 4: EXPERTISE PREVIEW */}
-      <section id="industries" className="py-32 px-6">
-        <div className="max-w-[1400px] mx-auto">
-          <motion.div
-            className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="max-w-2xl">
-                <h2 className="font-serif text-5xl md:text-6xl font-medium text-navy mb-6 leading-tight">
-                Industries We Serve
-                </h2>
-                <p className="text-xl text-muted-foreground font-light">
-                Applying rigorous analytical methods across sectors where accuracy drives results.
-                </p>
-            </div>
-            <Button variant="outline" className="border-navy text-navy hover:bg-navy hover:text-white h-12 px-8 rounded-none hidden md:flex">
-                View All Industries
-            </Button>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { name: 'Financial Services', desc: 'Regulatory compliance meets growth' },
-              { name: 'Technology', desc: 'Scale without breaking systems' },
-              { name: 'Manufacturing', desc: 'Operational efficiency gains' },
-              { name: 'Healthcare', desc: 'Patient outcomes + profitability' },
-            ].map((industry, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group relative bg-white border border-border p-10 flex flex-col justify-between hover:border-navy transition-all duration-500 h-80 hover:-translate-y-2 hover:shadow-xl hover:shadow-navy/10"
-              >
-                <div className="absolute top-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <ArrowRight className="text-navy -rotate-45" />
-                </div>
-
-                <div className="relative z-10 mt-auto">
-                  <h3 className="font-serif text-3xl text-navy mb-4 group-hover:translate-x-1 transition-transform duration-300">
-                    {industry.name}
-                  </h3>
-                  <div className="h-[1px] w-12 bg-navy/20 mb-4 group-hover:w-full transition-all duration-500" />
-                  <p className="text-base text-muted-foreground font-light">{industry.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-           <div className="mt-12 md:hidden">
-             <Button variant="outline" className="w-full border-navy text-navy hover:bg-navy hover:text-white h-12 rounded-none">
-                View All Industries
-            </Button>
-           </div>
-        </div>
-      </section>
-
       {/* FOOTER */}
-      <footer id="contact" className="bg-navy-deep text-white py-24 px-6 border-t border-white/5">
+      <footer className="bg-navy-deep text-white py-24 px-6 border-t border-white/5">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid md:grid-cols-2 gap-16 mb-20 pb-20 border-b border-white/5">
              <div>
@@ -343,7 +122,7 @@ const Index = () => {
                      <span className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-navy transition-all duration-300">
                         <ArrowRight size={20} className="-rotate-45" />
                      </span>
-                     <p className="text-2xl md:text-3xl text-white/90 font-light group-hover:translate-x-2 transition-transform duration-300">hello@eigenconsulting.com</p>
+                     <a href="mailto:hello@eigenconsulting.com" className="text-2xl md:text-3xl text-white/90 font-light group-hover:translate-x-2 transition-transform duration-300">hello@eigenconsulting.com</a>
                  </div>
              </div>
              <div className="flex flex-col justify-end">
