@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { Mail } from 'lucide-react';
 
 export const Header = () => {
   return (
@@ -18,33 +19,36 @@ export const Header = () => {
             </span>
         </Link>
 
-      <nav className="hidden md:flex items-center gap-12">
-        <Link to="/expertise" className="text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors font-medium">
-          Expertise
-        </Link>
-        <Link to="/about" className="text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors font-medium">
-          About
-        </Link>
-        <Link to="/contact" className="text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors font-medium">
-          Contact
-        </Link>
-      </nav>
-
-      <div className="flex items-center gap-4">
-        <Button
-          size="sm"
-          className="relative overflow-hidden bg-navy text-white rounded-none px-10 h-14 font-medium tracking-wide shadow-xl shadow-navy/10 group"
-          asChild
-        >
-          <Link to="/contact">
-            <span className="relative z-10 flex items-center gap-2">
-              Get Audit
-              <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </span>
-            <span className="absolute inset-0 bg-navy-deep translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+        <nav className="hidden md:flex items-center gap-12">
+          <Link to="/services" className="text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors font-medium">
+            Services
           </Link>
-        </Button>
-      </div>
+          <Link to="/approach" className="text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors font-medium">
+            Approach
+          </Link>
+          <Link to="/about" className="text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors font-medium">
+            About
+          </Link>
+          <Link to="/contact" className="text-sm uppercase tracking-wider text-foreground/80 hover:text-foreground transition-colors font-medium">
+            Contact
+          </Link>
+        </nav>
+
+        <div className="flex items-center gap-4">
+          <Button
+            size="sm"
+            className="relative overflow-hidden bg-navy text-white rounded-none px-8 h-14 font-medium tracking-wide shadow-xl shadow-navy/10 group"
+            asChild
+          >
+            <a href="mailto:hello@eigenconsulting.com?subject=Analytics consulting enquiry">
+              <span className="relative z-10 flex items-center gap-2">
+                Email Us
+                <Mail className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
+              <span className="absolute inset-0 bg-navy-deep translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+            </a>
+          </Button>
+        </div>
       </nav>
     </motion.header>
   );
